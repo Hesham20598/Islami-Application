@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Islami Application</string>
     <string name="supervised_by_mohamed_nabil">Supervised by Mohamed Nabil</string>
+    <string name="quran">القرآن</string>
+    <string name="tasbeeh">التسبيح</string>
+    <string name="hadeeth">الحديث</string>
+    <string name="radio">الراديو</string>
+    <string name="islami">إسلامي</string>
 </resources>
