@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.islamiapplication.databinding.ItemSuraNameBinding
 import com.example.islamiapplication.model.SuraNameIndex
 
-class SuraNameAdapter(val suraItems: List<SuraNameIndex>?) : Adapter<SuraNameAdapter.SuraNameIndexViewHolder>() {
+class SuraNameAdapter(val suraItems: List<SuraNameIndex>?) :
+    Adapter<SuraNameAdapter.SuraNameIndexViewHolder>() {
     class SuraNameIndexViewHolder(val suraNameBinding: ItemSuraNameBinding) :
         ViewHolder(suraNameBinding.root) {
         fun bind(item: SuraNameIndex) {
@@ -17,7 +18,8 @@ class SuraNameAdapter(val suraItems: List<SuraNameIndex>?) : Adapter<SuraNameAda
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SuraNameIndexViewHolder {
-        val binding = ItemSuraNameBinding.inflate(LayoutInflater.from(parent.context))
+        val binding =
+            ItemSuraNameBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return SuraNameIndexViewHolder(binding)
     }
 
@@ -26,7 +28,7 @@ class SuraNameAdapter(val suraItems: List<SuraNameIndex>?) : Adapter<SuraNameAda
     }
 
     override fun onBindViewHolder(holder: SuraNameIndexViewHolder, position: Int) {
-        val item = suraItems?.get(position)?:return
+        val item = suraItems?.get(position) ?: return
         holder.bind(item)
     }
 }
