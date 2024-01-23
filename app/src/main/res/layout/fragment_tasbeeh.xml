@@ -1,14 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.TasbeehFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/iv_head_of_sebha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/sebha_head"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_bodey_of_sebha"
+        app:layout_constraintRight_toRightOf="@+id/iv_bodey_of_sebha"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".2" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/iv_bodey_of_sebha"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="-26dp"
+        android:src="@drawable/sebha_bodey"
+        app:layout_constraintHeight_percent=".3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/iv_head_of_sebha" />
+
+    <TextView
+        android:id="@+id/tv_addad_tasbeeh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/elmessiri"
+        android:text="عدد التسبيحات"
+        android:textColor="@color/text_black_color"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="@id/iv_bodey_of_sebha"
+        app:layout_constraintRight_toRightOf="@id/iv_bodey_of_sebha"
+        app:layout_constraintTop_toBottomOf="@id/iv_bodey_of_sebha"
+        tools:layout_editor_absoluteX="259dp" />
+
+    <TextView
+        android:id="@+id/tv_tasbeeh_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/koufibd"
+        android:text="0"
+        android:padding="30dp"
+        android:textColor="@color/text_black_color"
+        android:background="@drawable/tasbeeh_counter_bg"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_addad_tasbeeh" />
+
+    <Button
+        android:id="@+id/btn_tasbeeh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_tasbeeh_counter"
+        android:text="سبحان الله"
+        android:textSize="25sp"
+        android:layout_marginTop="16dp"
+        android:paddingVertical="12dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_tasbeeh_counter"
+app:layout_constraintRight_toRightOf="@id/tv_tasbeeh_counter"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
